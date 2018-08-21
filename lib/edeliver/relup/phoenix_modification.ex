@@ -35,6 +35,7 @@ defmodule Edeliver.Relup.PhoenixModification do
   use Edeliver.Relup.Modification
 
   def modify_relup(instructions = %Instructions{}, config = %{}) do
+    IO.inspect(config.name)
     instructions
     # check whether upgrade is possible
     |> Edeliver.Relup.Instructions.StartSection.modify_relup(config, :check)
